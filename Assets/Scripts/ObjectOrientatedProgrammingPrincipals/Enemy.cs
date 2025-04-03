@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class Enemy : BaseCharacter
 {
-    public void Attack()
+    public void Patrol()
     {
-        Debug.Log("Enemy is attacking!");
+        Debug.Log("Enemy is patrolling!");
+    }
+
+    public void Spawn()
+    {
+        Debug.Log("Enemy is spawning!");
     }
 }

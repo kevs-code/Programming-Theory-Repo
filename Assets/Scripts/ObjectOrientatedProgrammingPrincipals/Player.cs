@@ -1,24 +1,20 @@
 using UnityEngine;
 
-public class Player : BaseCharacter, IPlayerDamage
+public class Player : BaseCharacter
 {
-
-
-    public void Attack()
+    public void UniqueAbilities()
     {
-        Debug.Log("Player Attacking!");
-
+        Debug.Log("The Player does the conga!");
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damAmount)
     {
-        base.TakeDamage(damage);//Execute the base functionality of this function
-
-        Debug.Log("The Player is chasing the Enemy!");
+        base.TakeDamage(damAmount);
+        Debug.Log("Player shouts Runaway, Runaway!");
     }
-
-    public void PlayerTripleAttack()
+    
+    public void Respawn()
     {
-
+        Debug.Log("The Player respawns!");
     }
 }

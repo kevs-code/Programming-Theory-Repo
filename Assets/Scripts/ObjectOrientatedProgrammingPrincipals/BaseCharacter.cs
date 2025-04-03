@@ -1,36 +1,46 @@
 using UnityEngine;
 
-/*
-public interface IDamageable
+public class BaseCharacter : IDamage
 {
-    void TakeDamage(int damage);
-    void Defence();
-}
-*/
-
-public class BaseCharacter : IDamageable
-{
-    private string name;
+    private string _name;
     public string Name
     {
-        get { return name; }
-        set { name = value; }
+        get { return _name; }
+        set { _name = value; }
     }
 
-    private int health = 100;
+    private int _health = 100;
     public int Health
     {
-        get { return health; }
-        set { health = Mathf.Max(0, value); }
+        get { return _health; }
+        set { _health = Mathf.Max(0, value); }
     }
 
+    private float _attackValue = 5.5f;
 
-    public virtual void TakeDamage(int damage)
+    public float AttackValue
     {
-        Debug.Log(Name + " took " + damage + " damage.");
+        get { return _attackValue; }
+        set { _attackValue = Mathf.Max(0, value); }
     }
 
-    public void Defence()
+    public void DealDamage()
     {
+        Debug.Log(Name + " only deals " + AttackValue + " damage.");
+    }
+
+    public virtual void TakeDamage(float damAmount)
+    {
+        Debug.Log(Name + " took " + damAmount + " damage.");
+    }
+
+    public void SetDamageValue(float value)
+    {
+        Debug.Log($"{Name} sets their imaginary damage float or perhaps AttackValue to {value}");
+    }
+
+    public void Healing(int healthAmount)
+    {
+        Debug.Log($"{Name} heals unclamped Health {Health} += {healthAmount}");
     }
 }
