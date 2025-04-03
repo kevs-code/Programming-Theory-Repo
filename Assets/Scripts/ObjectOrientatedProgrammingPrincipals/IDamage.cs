@@ -4,4 +4,3 @@ public interface IDamage
     void TakeDamage(float damAmount);
     void SetDamageValue(float value);
 }
-

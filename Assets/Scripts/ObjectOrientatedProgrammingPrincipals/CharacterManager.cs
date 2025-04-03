@@ -26,7 +26,8 @@ public class CharacterManager : MonoBehaviour
         enemyData.SetDamageValue(20);
         enemyData.DealDamage();
         playerData.TakeDamage(20);
-        
+
+        playerData.Jump();
         playerData.Respawn();
     }
 }

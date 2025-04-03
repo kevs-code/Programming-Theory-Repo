@@ -4,11 +4,11 @@ public class Enemy : BaseCharacter
 {
     public void Patrol()
     {
-        Debug.Log("Enemy is patrolling!");
+        Debug.Log($"Enemy: {Name} is patrolling!");
     }
 
     public void Spawn()
     {
-        Debug.Log("Enemy is spawning!");
+        Debug.Log($"Enemy: {Name} is spawning!");
     }
 }

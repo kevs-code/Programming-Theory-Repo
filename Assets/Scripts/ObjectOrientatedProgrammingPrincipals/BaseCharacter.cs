@@ -41,6 +41,6 @@ public class BaseCharacter : IDamage
 
     public void Healing(int healthAmount)
     {
-        Debug.Log($"{Name} heals unclamped Health {Health} += {healthAmount}");
+        Debug.Log($"{Name} heals Health {Health} += {healthAmount}");
     }
 }
